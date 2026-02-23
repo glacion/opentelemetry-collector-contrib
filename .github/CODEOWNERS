@@ -52,6 +52,7 @@ exporter/awsxrayexporter/                                        @open-telemetry
 exporter/azureblobexporter/                                      @open-telemetry/collector-contrib-approvers @hgaol @MovieStoreGuy
 exporter/azuredataexplorerexporter/                              @open-telemetry/collector-contrib-approvers @ag-ramachandran
 exporter/azuremonitorexporter/                                   @open-telemetry/collector-contrib-approvers @pcwiese @hgaol
+exporter/bigqueryexporter/                                       @open-telemetry/collector-contrib-approvers @glacion
 exporter/bmchelixexporter/                                       @open-telemetry/collector-contrib-approvers @bertysentry @NassimBtk @MovieStoreGuy
 exporter/cassandraexporter/                                      @open-telemetry/collector-contrib-approvers @atoulme @emreyalvac
 exporter/clickhouseexporter/                                     @open-telemetry/collector-contrib-approvers @hanjm @Frapschen @SpencerTorres

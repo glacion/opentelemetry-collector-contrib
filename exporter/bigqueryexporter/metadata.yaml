@@ -1,0 +1,26 @@
+type: bigquery
+display_name: BigQuery Exporter
+status:
+  class: exporter
+  stability:
+    development: [traces, metrics, logs]
+  distributions: [contrib]
+  codeowners:
+    active: [glacion]
+
+tests:
+  config:
+    dataset:
+      id: test_dataset
+  skip_lifecycle: true
+  goleak:
+    ignore:
+      top:
+        - "go.opencensus.io/stats/view.(*worker).start"
+        - "google.golang.org/grpc/internal/grpcsync.(*CallbackSerializer).run"
+        - "google.golang.org/grpc/internal/transport.(*controlBuffer).get"
+      any:
+        - "cloud.google.com/go/bigquery/storage/managedwriter.(*connection).getStream.func1"
+        - "google.golang.org/grpc/internal/transport.(*http2Client).reader"
+        - "net/http.(*http2clientConnReadLoop).run"
+        - "golang.org/x/net/http2.(*clientConnReadLoop).run"
